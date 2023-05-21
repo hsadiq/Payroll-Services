@@ -17,3 +17,8 @@ VALUES ('Sadiq', 22000, '2022-12-15'), ('Kanishk', 25000, '2020-05-05'), ('Sudar
 select * from employee_payroll;
 
 SELECT Empolyee_Salary FROM employee_payroll WHERE Empolyee_Name='Sadiq';
+
+ALTER TABLE employee_payroll
+ADD COLUMN Gender varchar(10) AFTER Empolyee_Name;
+
+UPDATE employee_payroll set Gender ='M' where Empolyee_Name = 'Sadiq' or Empolyee_Name ='Kanishk';
