@@ -21,4 +21,17 @@ SELECT Empolyee_Salary FROM employee_payroll WHERE Empolyee_Name='Sadiq';
 ALTER TABLE employee_payroll
 ADD COLUMN Gender varchar(10) AFTER Empolyee_Name;
 
-UPDATE employee_payroll set Gender ='M' where Empolyee_Name = 'Sadiq' or Empolyee_Name ='Kanishk';
+UPDATE employee_payroll set Gender ='F' where Empolyee_Name = 'Sudarshan' or Empolyee_Name ='Ashish';
+
+SELECT SUM(Empolyee_Salary) AS Total_Salary FROM employee_payroll;
+
+SELECT AVG(Empolyee_Salary) AS Average_Salary FROM employee_payroll;
+
+SELECT MIN(Empolyee_Salary) AS Minimum_Salary FROM employee_payroll;
+
+SELECT MAX(Empolyee_Salary) AS Maximum_Salary FROM employee_payroll;
+
+SELECT COUNT(*) AS Male_Count FROM employee_payroll WHERE Gender = 'M';
+
+SELECT COUNT(*) AS Female_Count FROM employee_payroll WHERE Gender = 'F';
+
