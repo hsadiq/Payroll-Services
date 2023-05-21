@@ -13,3 +13,5 @@ Start_Date date
 
 INSERT INTO employee_payroll (Empolyee_Name, Empolyee_Salary, Start_Date)
 VALUES ('Sadiq', 22000, '2022-12-15'), ('Kanishk', 25000, '2020-05-05'), ('Sudarshan', 15000, '2019-10-10'), ('Ashish', 54000, '2018-12-14');
+
+select * from employee_payroll;
