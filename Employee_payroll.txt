@@ -8,7 +8,9 @@ create table employee_payroll(
 Empolyee_ID int auto_increment primary key not null,
 Empolyee_Name varchar(20),
 Empolyee_Salary double,
-Start_Date varchar(10)
+Start_Date date
 );
 
 select * from employee_payroll;
+
+
