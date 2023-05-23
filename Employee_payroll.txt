@@ -35,3 +35,8 @@ SELECT COUNT(*) AS Male_Count FROM employee_payroll WHERE Gender = 'M';
 
 SELECT COUNT(*) AS Female_Count FROM employee_payroll WHERE Gender = 'F';
 
+Create table Employee_Details(
+Phone_Number int(10),
+Employee_Address varchar(20),
+Employee_Department varchar(10) not null
+);
