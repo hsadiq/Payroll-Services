@@ -40,12 +40,15 @@ Phone_Number long,
 Employee_Address varchar(20),
 Employee_Department varchar(10) not null,
 Basic_Pay int,
+Phone_Number int(10),
+Employee_Address varchar(20),
+Employee_Department varchar(10) not null,
+Basic_Pay int(10),
 Pay_Deduction double,
 Taxable_Pay int(5),
 Income_Tax int(5),
 Net_Pay double
 );
-
 
 
 INSERT INTO Employee_Details (Phone_Number, Employee_Address, Employee_Department, Basic_Pay, Pay_Deduction, Taxable_Pay, Income_Tax, Net_Pay)
