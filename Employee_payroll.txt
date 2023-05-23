@@ -12,7 +12,7 @@ Start_Date date
 );
 
 INSERT INTO employee_payroll (Empolyee_Name, Empolyee_Salary, Start_Date)
-VALUES ('Sadiq', 22000, '2022-12-15'), ('Kanishk', 25000, '2020-05-05'), ('Sudarshan', 15000, '2019-10-10'), ('Ashish', 54000, '2018-12-14');
+VALUES ('Sadiq', 22000, '2022-12-15'), ('Kanishk', 25000, '2020-05-05'), ('Sudarshan', 15000, '2019-10-10'), ('Teressa', 54000, '2018-12-14');
 
 select * from employee_payroll;
 
@@ -21,7 +21,7 @@ SELECT Empolyee_Salary FROM employee_payroll WHERE Empolyee_Name='Sadiq';
 ALTER TABLE employee_payroll
 ADD COLUMN Gender varchar(10) AFTER Empolyee_Name;
 
-UPDATE employee_payroll set Gender ='F' where Empolyee_Name = 'Sudarshan' or Empolyee_Name ='Ashish';
+UPDATE employee_payroll set Gender ='F' where Empolyee_Name = 'Teressa' or Empolyee_Name ='Ashish';
 
 SELECT SUM(Empolyee_Salary) AS Total_Salary FROM employee_payroll;
 
@@ -35,3 +35,22 @@ SELECT COUNT(*) AS Male_Count FROM employee_payroll WHERE Gender = 'M';
 
 SELECT COUNT(*) AS Female_Count FROM employee_payroll WHERE Gender = 'F';
 
+Create table Employee_Details(
+Phone_Number long,
+Employee_Address varchar(20),
+Employee_Department varchar(10) not null,
+Basic_Pay int,
+Pay_Deduction double,
+Taxable_Pay int(5),
+Income_Tax int(5),
+Net_Pay double
+);
+
+
+
+INSERT INTO Employee_Details (Phone_Number, Employee_Address, Employee_Department, Basic_Pay, Pay_Deduction, Taxable_Pay, Income_Tax, Net_Pay)
+VALUES (123456, 'Address1', 'Sales and Marketing', 5000, 100, 4900, 500, 4400);
+
+UPDATE employee_payroll
+SET Employee_Department = 'Sales' 
+WHERE Employee_ID = 4;
